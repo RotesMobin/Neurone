@@ -42,7 +42,8 @@ public class RamenScript : MonoBehaviour {
             GameObject go = GameObject.Find("Game Controller");
             GameControllerScript other = (GameControllerScript)go.GetComponent<GameControllerScript>();
             other.receivEvent(GameControllerScript.EEvent.autreEvent);
-
+            GameObject Pl = GameObject.Find("Player(Clone)");
+            Pl.GetComponent<metriqueScript>().touch_Objet++;
             GameObject.FindWithTag("SpawnManagger").GetComponent<CollectiblesSpawning>().setFree(pos);
 
             source.PlayOneShot(soundBonus, 1.0f);

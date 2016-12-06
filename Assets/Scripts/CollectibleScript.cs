@@ -46,6 +46,8 @@ public class CollectibleScript : MonoBehaviour {
         if (coll.gameObject.tag == "Player")
         {
             GameObject go = GameObject.Find("Game Controller");
+            GameObject Pl = GameObject.Find("Player(Clone)");
+            Pl.GetComponent<metriqueScript>().touch_Objet++;
             GameControllerScript other = (GameControllerScript)go.GetComponent<GameControllerScript>();
             if (prefabF <= 0.5f)
             {

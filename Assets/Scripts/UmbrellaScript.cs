@@ -44,7 +44,8 @@ public class UmbrellaScript : MonoBehaviour {
             GameObject go = GameObject.Find("Game Controller");
             scrpt = go.GetComponent<GameControllerScript>();
             scrpt.receivEvent(GameControllerScript.EEvent.autreEvent);
-
+            GameObject Pl = GameObject.Find("Player(Clone)");
+            Pl.GetComponent<metriqueScript>().touch_Objet++;
             GameObject.FindWithTag("SpawnManagger").GetComponent<CollectiblesSpawning>().setFree(pos);
 
             source.PlayOneShot(soundBonus, 1.0f);
