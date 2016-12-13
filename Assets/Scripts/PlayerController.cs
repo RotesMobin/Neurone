@@ -4,7 +4,6 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
-    GameObject tornado;
     public GameObject Pantsu;
     GameObject LosePantsu;
     public AudioClip malus;

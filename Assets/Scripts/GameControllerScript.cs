@@ -12,12 +12,10 @@ public class GameControllerScript : MonoBehaviour
     public float m_gameScore;
     public GameObject WindPrefab;
     public GameObject TornadoPrefab;
-    ScoreScript scrpt;
     public GameObject TrashPrefab;
     public GameObject PaperPrefab;
     bool m_isOver;
 
-    GameObject tornado;
     GameObject trash;
     GameObject paper;
 
@@ -46,7 +44,6 @@ public class GameControllerScript : MonoBehaviour
 
     GameObject HUDDefis;
 
-    int Case;
     //Text text;
     Text m_missionText;
     GameObject spriteDefis;
@@ -58,7 +55,6 @@ public class GameControllerScript : MonoBehaviour
     int nbPoubelle;
     int nbTourbillion;
     int nbJourneaux;
-    float TimeEsquive;
     int test = 1;
     enum EMission
     {
@@ -287,7 +283,6 @@ public class GameControllerScript : MonoBehaviour
                 nbPoubelle = 0;
                 nbTourbillion = 0;
                 nbJourneaux = 0;
-                TimeEsquive = 0.0f;
                 m_currentMissionFailed = false;
                 Color tmp = HUDDefis.GetComponent<SpriteRenderer>().color;
                 tmp.a = 1.0f;
@@ -477,7 +472,6 @@ public class GameControllerScript : MonoBehaviour
         HUDscore hud = (HUDscore)go.GetComponent<HUDscore>();
         hud.AddScore(nbPoint);
     }
-
 
     public void printScore(Vector2 position, string v)
     {
